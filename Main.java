@@ -1,6 +1,7 @@
 class Main{
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception{
         System.out.println("Hello World");
-        System.out.println(UserInterface.searchOption());
+        Dislikes.getRatio("https://returnyoutubedislikeapi.com/votes?videoId=kxOuG8jMIgI");
+        // System.out.println(UserInterface.searchOption());
     }
 }

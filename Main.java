@@ -25,7 +25,7 @@ class Main{
             // System.out.println("Views:    "+ videoInfo.get(i).getViewCount());
         }
         Arrays.sort(ratios);
-        for (int temp = 0; temp < ratios.length; temp++){
+        for (int temp = 4; temp >= 0; temp--){
             for (int i = 0; i < ratios.length; i++){
                 if (ratios[temp] == videoInfo.get(i).getLikes()/videoInfo.get(i).getDislikes()){
                     System.out.println(rawVideo.get(i).getTitle());
@@ -36,10 +36,5 @@ class Main{
                 }
             }
         }
-        // 10 5
-        // 20 2
-        // 30 1
-        // 40 4
-        // 50 3
     }
 }

@@ -14,7 +14,8 @@ public class UserInterface {
         String key = sc.nextLine();
         if (key.contains("^[[200~")){
             newKey = key.replace("^[[200~", "");
+            key  = newKey.replace("^[[201~", "");
         }
-        return newKey;
+        return key;
     }
 }

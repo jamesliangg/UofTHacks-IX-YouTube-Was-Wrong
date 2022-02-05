@@ -7,6 +7,7 @@ class Main{
         String searchOption = UserInterface.searchOption();
         String searchTemp = searchOption.replace(" ", "%20");
         String key = UserInterface.getAPIKey();
+        // System.out.println(key);
         System.out.println(searchTemp);
         ArrayList<Video> rawVideo = new ArrayList<Video>();
         rawVideo = YouTube.getUrl(searchTemp, key);

@@ -10,11 +10,15 @@ class Main{
         ArrayList<Video> rawVideo = new ArrayList<Video>();
         rawVideo = YouTube.getUrl(searchTemp, key);
         System.out.println(Video.getNumRawVideo());
-        System.out.println(rawVideo.get(0).getVideoID());
-        System.out.println(rawVideo.get(0).getTitle());
+        System.out.print("\033[H\033[2J");  
+        System.out.flush();  
+        // System.out.println(rawVideo.get(0).getVideoID());
         videoInfo = Dislikes.getRatio(rawVideo);
-        System.out.println(videoInfo.get(0).getLikes());
-        System.out.println(videoInfo.get(0).getDislikes());
-        System.out.println(videoInfo.get(0).getViewCount());
+        for (int i = 0; i < rawVideo.size(); i++){
+            System.out.println(rawVideo.get(i).getTitle());
+            System.out.println("Likes:    " + videoInfo.get(i).getLikes());
+            System.out.println("Dislikes: " + videoInfo.get(i).getDislikes());
+            System.out.println("Views:    "+ videoInfo.get(i).getViewCount());
+        }
     }
 }

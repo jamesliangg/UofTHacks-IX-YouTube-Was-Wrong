@@ -5,13 +5,13 @@ Our application returns the functionality of YouTube took out not so long ago. W
 
 
 ### Why we used the technologies you used?
-With this project we were able to impliment Google's own YouTube API responsible for pulling the data (views, likes, dislikes, and video name).
+With this project we were able to impliment Google's own YouTube API responsible for pulling video ID's and titles
 
 Information about videos including dislikes and likes were retrieved using returnyoutubedislike.com
 
 
 ### Some of the challenges faced and features you hope to implement in the future.
-Some challenges include working with an API for our first time. Making it very difficult for us to learn on the spot. We also did encounter some difficulty learning about sorting 2d arrays, as we haven't really learned this yet.
+Some challenges include working with an API for our first time. Making it very difficult for us to learn on the spot. We also did encounter some difficulty learning about sorting 2D arrays, as we haven't really learned this yet.
 
 
 ## Installation

@@ -6,7 +6,9 @@ class Main{
         // System.out.println("Hello World");
         // videoInfo = Dislikes.getRatio("https://returnyoutubedislikeapi.com/votes?videoId=kxOuG8jMIgI");
         // System.out.println(videoInfo.get(0).getLikes());
-        // System.out.println(UserInterface.searchOption());
-        YouTube.getUrl();
+        String searchOption = UserInterface.searchOption();
+        String searchTemp = searchOption.replace(" ", "%20");
+        // System.out.println(searchTemp);
+        YouTube.getUrl(searchTemp);
     }
 }

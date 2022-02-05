@@ -8,8 +8,8 @@ import java.net.URL;
 // https://blog.cpming.top/p/httpurlconnection-post-raw
 
 class YouTube{
-    public static void getUrl() throws IOException{
-        URL url = new URL("https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=iphone%20%8%20battery%20replacement&key=AIzaSyBNoxsjxorQfXNDwHa9a2fvlXUObZGtINM");
+    public static void getUrl(String searchRequest) throws IOException{
+        URL url = new URL("https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=" + searchRequest + "&key=AIzaSyBNoxsjxorQfXNDwHa9a2fvlXUObZGtINM");
         HttpURLConnection http = (HttpURLConnection)url.openConnection();
         http.setRequestProperty("Accept", "application/json");
 

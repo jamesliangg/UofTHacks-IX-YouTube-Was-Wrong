@@ -8,9 +8,13 @@ public class UserInterface {
         return search;
     }
     public static String getAPIKey(){
+        String newKey = "";
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Google API Key");
         String key = sc.nextLine();
-        return key;
+        if (key.contains("^[[200~")){
+            newKey = key.replace("^[[200~", "");
+        }
+        return newKey;
     }
 }

@@ -5,7 +5,9 @@ Our application returns the functionality of YouTube took out not so long ago. W
 
 
 ### Why we used the technologies you used?
-With this project we were able to impliment Google's own YouTube API responsible for pulling the data (views, likes, dislikes, and video name). 
+With this project we were able to impliment Google's own YouTube API responsible for pulling the data (views, likes, dislikes, and video name).
+
+Information about videos including dislikes and likes were retrieved using returnyoutubedislike.com
 
 
 ### Some of the challenges faced and features you hope to implement in the future.

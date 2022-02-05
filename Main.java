@@ -8,7 +8,8 @@ class Main{
         // System.out.println(videoInfo.get(0).getLikes());
         String searchOption = UserInterface.searchOption();
         String searchTemp = searchOption.replace(" ", "%20");
+        String key = UserInterface.getAPIKey();
         // System.out.println(searchTemp);
-        YouTube.getUrl(searchTemp);
+        YouTube.getUrl(searchTemp, key);
     }
 }

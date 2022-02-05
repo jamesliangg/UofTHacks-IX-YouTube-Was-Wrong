@@ -1,2 +1,2 @@
-language = "undefined"
-run = ""
+language = "bash"
+run = "sh run_button.sh"

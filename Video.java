@@ -34,4 +34,7 @@ public class Video {
     public void setViewCount(int viewCount){
         this.viewCount = viewCount;
     }
+    public String toString(){
+        return id + " " + likes + " " + dislikes + " " + viewCount;
+    }
 }

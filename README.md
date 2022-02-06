@@ -3,7 +3,7 @@
 ![](logo.png)
 
 ### Video
-https://youtu.be/CNVYVbClDd8
+https://youtu.be/8AJ06XvqHh4
 
 ### Inspiration
 

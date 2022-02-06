@@ -1,6 +1,6 @@
 # UofTHacks IX YouTube Was Wrong
 
-![](logo.png)
+![](images/logo.png)
 
 ### Video
 https://youtu.be/8AJ06XvqHh4

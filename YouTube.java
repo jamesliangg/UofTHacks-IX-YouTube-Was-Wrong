@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 class YouTube{
     public static ArrayList<Video> getUrl(String searchRequest, String key) throws IOException{
-        URL url = new URL("https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=" + searchRequest + "&key=" + key);
+        URL url = new URL("https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&q=" + searchRequest + "&key=" + key);
         HttpURLConnection http = (HttpURLConnection)url.openConnection();
         http.setRequestProperty("Accept", "application/json");
 
@@ -32,19 +32,33 @@ class YouTube{
         Reader inputString = new StringReader(response);
         BufferedReader reader = new BufferedReader(inputString);
         String line;
-        String tempID = "";
-        String tempTitle = "";
         String id = "";
         String title = "";
+        String thumbnail = "";
+        String channel = "";
+        String pub = "";
         while ((line = reader.readLine()) != null) {
             if (line.contains("videoId")){
-                tempID = line.replace("\"videoId\": \"","");
-                id = tempID.substring(0, tempID.length() - 1).trim();
+                id = line.replace("\"videoId\": \"","");
+                id = id.substring(0, id.length() - 1).trim();
             }
             if (line.contains("title")){
-                tempTitle = line.replace("\"title\": \"","");
-                title = tempTitle.substring(0, tempTitle.length() - 2).trim();
-                rawVideo.add(new Video(id, title));
+                title = line.replace("\"title\": \"","");
+                title = title.substring(0, title.length() - 2).trim();
+            }  
+            if (line.contains("/default.jpg")){
+                thumbnail = line.replace("\"title\": \"","");
+                thumbnail = line.replace("\"url\": \"","");
+                thumbnail = thumbnail.substring(0, thumbnail.length() - 2).trim();
+            }  
+            if (line.contains("channelTitle")){
+                channel = line.replace("\"channelTitle\": \"","");
+                channel = channel.substring(0, channel.length() - 2).trim();
+            }  
+            if (line.contains("publishTime")){
+                pub = line.replace("\"publishTime\": \"","");
+                pub = pub.substring(0, pub.length() - 1).trim();
+                rawVideo.add(new Video(id, title, thumbnail, channel, pub));
             }  
         }
         http.disconnect();

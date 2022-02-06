@@ -6,10 +6,16 @@ public class Video {
     public String videoID;
     public String title;
     public static int numRawVideos;
+    public String thumbnailUrl;
+    public String channel;
+    public String pub;
 
-    public Video(String videoID, String title){
+    public Video(String videoID, String title, String thumbnailUrl, String channel, String pub){
         setVideoID(videoID);
         setTitle(title);
+        setThumbnailUrl(thumbnailUrl);
+        setChannel(channel);
+        setPub(pub);
         numRawVideos++;
     }
     public Video(String id, int likes, int dislikes, int viewCount){
@@ -39,6 +45,15 @@ public class Video {
     public static int getNumRawVideo(){
         return numRawVideos;
     }
+    public String getThumbnailUrl(){
+        return thumbnailUrl;
+    }
+    public String getChannel(){
+        return channel;
+    }
+    public String getPub(){
+        return pub;
+    }
     public void setID(String id){
         this.id = id;
     }
@@ -56,6 +71,15 @@ public class Video {
     }
     public void setTitle(String title){
         this.title = title;
+    }
+    public void setThumbnailUrl(String thumbnailUrl){
+        this.thumbnailUrl = thumbnailUrl;
+    }
+    public void setChannel(String channel){
+        this.channel = channel;
+    }
+    public void setPub(String pub){
+        this.pub = pub;
     }
     public String toString(){
         return id + " " + likes + " " + dislikes + " " + viewCount;

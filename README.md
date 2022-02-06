@@ -26,7 +26,7 @@ Some challenges include working with an API for our first time. Making it very d
 Install Java, have a internet connection, and get a Google API Key. 
 
 ## Usage
-Type your search into the first text field. Then input the Google API Key into the second text field. Then tadah your results are shown with information on each video.
+Type your search into the first text field. Then input the Google API Key into the second text field. Then tadah your results are shown with information on each video. The ratio is found by dividing the amount of likes by dislikes. Typically, the larger the number, the better.
 
 ### Example Output
 ![](images/output.png)

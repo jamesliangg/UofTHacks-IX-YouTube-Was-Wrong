@@ -2,6 +2,9 @@
 
 ![](logo.png)
 
+### Video
+![](https://youtu.be/CNVYVbClDd8)
+
 ### Inspiration
 
 YouTube removed the dislike button making it hard to judge whether a video was useful or not. We wanted to make it easy to search for what you needed and know if the video was like by its audience.

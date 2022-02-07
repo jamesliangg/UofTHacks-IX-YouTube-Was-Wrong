@@ -11,32 +11,8 @@ import java.net.URISyntaxException;
 
 public class GUI extends JFrame implements ActionListener{
     JTextField tf1, tf2;
-    String thumbnailUrl1 = "";
-    String thumbnailUrl2 = "";
-    String thumbnailUrl3 = "";
     String APIKey = "";
     String searchTerm = "";
-    String title1 = "";
-    String title2 = "";
-    String title3 = "";
-    int likes1 = 0;
-    int likes2 = 0;
-    int likes3 = 0;
-    int dislikes1 = 0;
-    int dislikes2 = 0;
-    int dislikes3 = 0;
-    int views1 = 0;
-    int views2 = 0;
-    int views3 = 0;
-    int ratio1 = 0;
-    int ratio2 = 0;
-    int ratio3 = 0;
-    String channel1 = "";
-    String channel2 = "";
-    String channel3 = "";
-    String pub1 = "";
-    String pub2 = "";
-    String pub3 = "";
     String url1 = "";
     String url2 = "";
     String url3 = "";
@@ -82,7 +58,6 @@ public class GUI extends JFrame implements ActionListener{
         url1 = videoInfo.get(0).getID();
         url2 = videoInfo.get(1).getID();
         url3 = videoInfo.get(2).getID();
-        dislikes2 = videoInfo.get(1).getDislikes();
         Icon thumbnnailIcon1;
         try {
             thumbnnailIcon1 = new ImageIcon(new URL(rawVideo.get(0).getThumbnailUrl()));

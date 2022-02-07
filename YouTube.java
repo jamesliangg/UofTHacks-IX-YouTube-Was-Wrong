@@ -16,7 +16,6 @@ class YouTube{
         URL url = new URL("https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&q=" + searchRequest + "&key=" + key);
         HttpURLConnection http = (HttpURLConnection)url.openConnection();
         http.setRequestProperty("Accept", "application/json");
-
         System.out.println(http.getResponseCode() + " " + http.getResponseMessage());
         String response = "";
         ByteArrayOutputStream result = new ByteArrayOutputStream();
@@ -26,8 +25,6 @@ class YouTube{
             result.write(buffer, 0, length);
         }
         response = result.toString();
-        // System.out.println(response);
-
         ArrayList<Video> rawVideo = new ArrayList<Video>();
         Reader inputString = new StringReader(response);
         BufferedReader reader = new BufferedReader(inputString);
